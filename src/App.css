@@ -5,7 +5,8 @@ html {
 
 .heading {
   text-align: center;
-  background-color: bisque;
+  color: white;
+  background-color: #cca353;
   margin: 0px;
   padding: 10px;
 }

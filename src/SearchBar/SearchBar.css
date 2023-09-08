@@ -3,9 +3,11 @@
     flex-direction: column;
     justify-content: center;
     background-image: url('./background_desktop.jpg');
+    height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 25rem;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   
   .SearchBar-sort-options ul {
