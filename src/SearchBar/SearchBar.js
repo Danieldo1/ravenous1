@@ -1,22 +1,48 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
 
 const sortByOptions = {
   "Best Match": "best_match",
   "Highest Rated": "rating",
   "Most Reviewed": "review_count",
-}
-
+};
 
 const SearchBar = () => {
-const renderSortByOptions = () => {
-  return Object.keys(sortByOptions).map((sortByOption)=> {
-    let sortByOptionValue = sortByOptions[sortByOption];
-    return <li key={sortByOptionValue}>{sortByOption}</li>
-  })
+  const [termState, setTermState] = useState(null);
+  const [location, setLocation] = useState(null)
+  const [rating,setRating] = useState(null)
+
+
+  const updateTermState = (e) => {
+    const value = e.target.value
+    setTermState(value)
+  }
+
+const updateLocation = (e) => {
+  const value = e.target.value
+  setLocation(value)
 }
 
- 
+const updateRating = (e) => {
+const ratingValue = e.target.value
+ratingValue === rating ? setRating(null) : setRating(ratingValue)
+}
+
+const handleButton = () => {
+  console.log(`Searching for ${termState} options based on ${location} and ${rating}`)
+}
+
+  const renderSortByOptions = () => {
+    return Object.keys(sortByOptions).map((sortByOption) => {
+      let sortByOptionValue = sortByOptions[sortByOption];
+      return <li onChange={updateRating} key={sortByOptionValue}>{sortByOption}</li>;
+    });
+  };
+
+  console.log(termState)
+  console.log(location)
+  console.log(rating)
+
   return (
     <>
       <div className="SearchBar">
@@ -24,11 +50,11 @@ const renderSortByOptions = () => {
           <ul className="SearchBar-sort-options">{renderSortByOptions()}</ul>
         </div>
         <div className="SearchBar-fields">
-          <input placeholder="Search Businesses" />
-          <input placeholder="Where ?" />
+          <input placeholder="Search Businesses" onChange={updateTermState}/>
+          <input placeholder="Where ?" onChange={updateLocation} />
         </div>
         <div className="SearchBar-submit">
-            <a>Lets go</a>
+          <button onClick={handleButton}>Search</button>
         </div>
       </div>
     </>

@@ -12,7 +12,7 @@
   }
   
 li::marker {
-  content: '';
+  content: ' ';
 }
 
   .SearchBar-sort-options ul {
@@ -35,12 +35,17 @@ li::marker {
     transition: color .25s;
     
   }
-  
-  .SearchBar-sort-options li:hover {
+
+   .SearchBar-sort-options li:hover {
     color: #f0c36c;
     font-size: 18px;
   }
   
+  .SearchBar-sort-options li:active {
+    color: #f0c36c;
+    font-size: 18px;
+  }
+ 
   .SearchBar-sort-options li.active,
   .SearchBar-sort-options li.active:hover{
     border-bottom: 1px solid #f0c36c;
@@ -73,7 +78,7 @@ li::marker {
     text-align: center;
   }
   
-  .SearchBar-submit a {
+  .SearchBar-submit button {
     border-radius: 4px;
     padding: .72rem 1.7rem;
     background-color: #cca353;
@@ -82,7 +87,7 @@ li::marker {
     transition: background-color .5s;
   }
   
-  .SearchBar-submit a:hover {
+  .SearchBar-submit button:hover {
     cursor: pointer;
     background-color: #a7874b;
   }
