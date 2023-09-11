@@ -1,8 +1,8 @@
-import Business from "./Business/Business";
+
 import SearchBar from "./SearchBar/SearchBar";
 import BusinessList from "./BusinessList/BusinessList";
 import styles from "./App.css";
-import {useState} from 'react'
+
 
 const business = {
   imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
@@ -15,10 +15,14 @@ const business = {
   rating: 4.5,
   reviewCount: 90,
 }
+
 const businesses = [business, business, business, business, business, business];
 
 function App() {
-const [arr,setArr] = useState([])
+
+  const searchYelp = (termState, location, sortBy) => {
+    console.log(`Searching Yelp with ${termState}, ${location}, ${sortBy}`);
+  };
 
 
 
@@ -28,9 +32,8 @@ const [arr,setArr] = useState([])
         <h2 className="heading">revenous</h2>
       </div>
 
-      <SearchBar setArr={setArr} />
-      <Business business={businesses}/>
-      <BusinessList />
+      <SearchBar searchYelp={searchYelp} />
+      <BusinessList businesses={businesses} />
     </div>
   );
 }

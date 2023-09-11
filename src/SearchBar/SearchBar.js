@@ -8,7 +8,7 @@ const sortByOptions = {
   "Most Reviewed": "review_count",
 };
 
-const SearchBar = ({ searchYelp}) => {
+const SearchBar = ({ searchYelp }) => {
   const [termState, setTermState] = useState('');
   const [location, setLocation] = useState('')
   const [sortBy,setSortBy] = useState('best_match')

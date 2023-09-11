@@ -2,21 +2,14 @@ import React from "react";
 import './BusinessList.css'
 import Business from "../Business/Business";
 
-
-
-
-const BusinessList = ({business}) => {
-
-if(!business){
-    return <h1>Loading...</h1>
-}
+const BusinessList = ({ businesses }) => {
 return (
     <div className="BusinessList">
-      {business.map((business)=> {
-            <Business  key={business} business={business} />
+      {businesses.map((business) => {
+           return <Business business={business} key={business.name} />
         })}
     </div>
 )
 }
 
-export default BusinessList
+export default BusinessList;

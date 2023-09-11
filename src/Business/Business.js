@@ -3,7 +3,7 @@ import "./Business.css";
 
 
 
-const Business = ({business}) => {
+const Business = ({ business }) => {
   return (
     <div className="Business">
       <div className="image-container">
