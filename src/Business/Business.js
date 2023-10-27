@@ -4,6 +4,7 @@ import './Business.css';
 const Business = (props) => {
   return (
     <div className="Business">
+      <h3 style={{marginTop: 0}} >This is the one:</h3>
       <div className="image-container">
         <img src={props.business.imageSrc} alt="" />
       </div>

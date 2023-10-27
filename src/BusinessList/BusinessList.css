@@ -2,10 +2,6 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 100px;
-  border-radius: 10px;
-  background-color: #fff;
   margin-top: 10px;
-  -webkit-box-shadow: 12px 21px 27px 10px rgba(0,0,0,0.46); 
-box-shadow: 12px 21px 27px 10px rgba(0,0,0,0.46);
+
   }

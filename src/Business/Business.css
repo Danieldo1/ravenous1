@@ -5,6 +5,11 @@
     width: 16.66rem;
     margin: 5rem 2.3rem .5rem;
     margin-top: 40px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 12px 21px 27px 10px rgba(0,0,0,0.46); 
+    box-shadow: 12px 21px 27px 10px rgba(0,0,0,0.46);
   }
   
   .Business .image-container {
