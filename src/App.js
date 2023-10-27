@@ -1,41 +1,31 @@
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
-import SearchBar from "./SearchBar/SearchBar";
-import BusinessList from "./BusinessList/BusinessList";
-import styles from "./App.css";
+import BusinessList from './BusinessList/BusinessList';
+import SearchBar from './SearchBar/SearchBar';
 
+import Yelp from './utils/Yelp';
 
-const business = {
-  imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-  name: "MarginOtto Pizzeria",
-  address: "1010 Paddington Way",
-  city: "Flavortown",
-  state: "NY",
-  zipCode: "10101",
-  category: "Italian",
-  rating: 4.5,
-  reviewCount: 90,
-}
+const App = () => {
+  const [businesses, setBusinesses] = useState([]);
 
-const businesses = [business, business, business, business, business, business];
-
-function App() {
-
-  const searchYelp = (termState, location, sortBy) => {
-    console.log(`Searching Yelp with ${termState}, ${location}, ${sortBy}`);
+  const searchYelp = (term, location, sortBy) => {
+    Yelp.search(term, location, sortBy).then((businesses) => {
+      setBusinesses(businesses);
+    });
   };
 
-
+  useEffect(() => {
+    // You can add any initial logic here, if needed.
+  }, []);
 
   return (
-    <div >
-      <div className={styles.App} >
-        <h2 className="heading">revenous</h2>
-      </div>
-
+    <div className="App">
+      <h1>ravenous</h1>
       <SearchBar searchYelp={searchYelp} />
       <BusinessList businesses={businesses} />
     </div>
   );
-}
+};
 
 export default App;
