@@ -21,7 +21,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>ravenous</h1>
+      <h1 className="App-header">The One</h1>
+      <h3 className="App-header-it"><em>When you cant decide what to eat</em></h3>
       <SearchBar searchYelp={searchYelp} />
       <BusinessList businesses={businesses} />
     </div>

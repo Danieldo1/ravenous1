@@ -4,6 +4,7 @@
     justify-content: space-between;
     width: 16.66rem;
     margin: 5rem 2.3rem .5rem;
+    margin-top: 40px;
   }
   
   .Business .image-container {
@@ -21,7 +22,7 @@
   
   .Business-information {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
   .Business-information p {

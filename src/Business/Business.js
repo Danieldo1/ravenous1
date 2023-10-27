@@ -15,8 +15,8 @@ const Business = (props) => {
           <p>{`${props.business.state} ${props.business.zipCode}`}</p>
         </div>
         <div className="Business-reviews">
-          <h3>{props.business.category}</h3>
-          <h3 className="rating">{`${props.business.rating} stars`}</h3>
+          <h3 style={{marginTop: 10}} >{props.business.category}</h3>
+          <h3 className="rating">{`${props.business.rating} ⭐`}</h3>
           <p>{`${props.business.reviewCount} reviews`}</p>
         </div>
       </div>

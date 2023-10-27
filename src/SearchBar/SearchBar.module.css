@@ -20,9 +20,15 @@ li::marker {
     justify-content: center;
     margin-bottom: 2.22rem;
     color: #ffffff;
-    
   }
   
+  .input{
+-webkit-box-shadow: 3px 7px 8px 7px rgba(0,0,0,0.61); 
+box-shadow: 3px 7px 8px 7px rgba(0,0,0,0.61);
+font-family: 'Poppins', sans-serif;
+font-weight: 100;
+  }
+
   .SearchBarsortoptions li {
     cursor: pointer;
     width: 4.33rem;
@@ -51,6 +57,7 @@ li::marker {
     border-bottom: 1px solid #f0c36c;
     color: #f0c36c;
     font-size: 18px;
+    text-shadow: 1px 3px 10px #000000;
   }
   
 
@@ -82,9 +89,13 @@ li::marker {
     border-radius: 4px;
     padding: .72rem 1.7rem;
     background-color: #cca353;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     color: #ffffff;
     font-weight: 600;
     transition: background-color .5s;
+    border-radius: 10px;
   }
   
   .SearchBarsubmit button:hover {
@@ -94,7 +105,7 @@ li::marker {
   
   @media only screen and (max-width: 560px) {
     .SearchBar {
-      background-image: url('./matheus-frade-KO46ZfbNdtY-unsplash.jpg');
+      background-image: url('./matheus-frade-KO46ZfbNdtY-unsplash.png');
     }
   
     .SearchBarsortoptions ul {

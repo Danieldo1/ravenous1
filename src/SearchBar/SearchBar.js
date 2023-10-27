@@ -39,15 +39,6 @@ const handleSearch = (event) => {
   searchYelp(termState, location, sortBy)
 }
 
-// const updateRating = (e) => {
-// const ratingValue = e.target.value
-// ratingValue === sortBy ? setSortBy(null) : setSortBy(ratingValue)
-// }
-
-// const handleButton = () => {
-//   console.log(`Searching for ${termState} options based on ${location} and ${rating}`)
-// }
-
   const renderSortByOptions = () => {
     return Object.keys(sortByOptions).map((sortByOption) => {
       let sortByOptionValue = sortByOptions[sortByOption];
@@ -70,11 +61,11 @@ const handleSearch = (event) => {
         </div>
         <form onSubmit={handleSearch}>
         <div className={styles.SearchBarfields}>
-          <input placeholder="Search Businesses" onChange={updateTermState}/>
-          <input placeholder="Where ?" onChange={updateLocation} />
+          <input className={styles.input} placeholder="Category of food ?" onChange={updateTermState} required/>
+          <input className={styles.input} placeholder="Where ?" onChange={updateLocation} required />
         </div>
         <div className={styles.SearchBarsubmit}>
-          <button type="submit">Search</button>
+          <button type="submit">Find One</button>
         </div>
         </form>
       </div>
